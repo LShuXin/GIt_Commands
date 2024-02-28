@@ -523,3 +523,31 @@ Counting objects: 2437, done.
 ```
 
  
+
+## git 如何设置代理，如何取消代理
+
+```
+1. 设置scoks代理
+全局配置代理
+git config  --global http.proxy socks5://127.0.0.1:10808
+git config  --global https.proxy socks5://127.0.0.1:10808
+ 
+当前项目文件夹内
+git config  --local http.proxy socks5://127.0.0.1:10808
+git config  --local https.proxy socks5://127.0.0.1:10808
+
+2.设置http代理
+全局配置代理
+git config  --global http.proxy http://127.0.0.1:1081
+git config  --global https.proxy https://127.0.0.1:1081
+
+当前项目文件夹内
+git config  --local http.proxy http://127.0.0.1:1081
+git config  --local https.proxy https://127.0.0.1:1081
+
+
+取消代理设置
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+```
+
